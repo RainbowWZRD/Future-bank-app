@@ -7,7 +7,11 @@ import {
     SidebarMenu,
     SidebarLink,
     SideBtnWrap,
-    SidebarRoute
+    SidebarRoute,
+    SocialWrapper,
+    SocialIcons,
+    GitHub,
+    Linkedin
 } from "./SidebarElements"
 
 const Sidebar = () => {
@@ -26,8 +30,13 @@ const Sidebar = () => {
                 <SidebarLink to="/signup">Sign Up</SidebarLink>
             </SidebarMenu>
             <SideBtnWrap>
-                <SidebarRoute to="/connect">Connect</SidebarRoute>
+                <SidebarRoute to="/connect">Connect 
+                </SidebarRoute>
             </SideBtnWrap>
+            <SocialWrapper>
+                    <GitHub onClick={() => window.open(`https://github.com/RainbowWZRD`)} />
+                    <Linkedin onClick={() => window.open(`https://www.linkedin.com/in/simome-bucciol/`)} />
+            </SocialWrapper>
         </SidebarWrapper>
         </SidebarContainer>
     )

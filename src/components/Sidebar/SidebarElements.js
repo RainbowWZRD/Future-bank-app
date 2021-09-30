@@ -2,6 +2,9 @@ import styled from "styled-components";
 import {FaTimes} from "react-icons/fa"
 import {Link as LinkR} from "react-router-dom"
 import {Link as LinkS} from "react-scroll"
+// import {FaWallet} from "react-icons/fa";
+import {FaGithub} from "react-icons/fa";
+import {FaLinkedin} from "react-icons/fa";
 
 export const SidebarContainer = styled.aside`
 position: fixed;
@@ -68,16 +71,53 @@ export const SidebarRoute = styled(LinkR)`
 border-radius: 20px;
 background: #01be71;
 white-space: nowrap;
-padding: 10px 22px;
+padding: 15px 30px;
 color: #010606;
 font-size: 16px;
 cursor: pointer;
 text-decoration:none;
-transition: all 0.3s ease-in-out;
+transition: all 0.4s ease-in-out;
 
 &:hover {
-    transition: all 0.3s ease-in-out;
+    transition: all 0.4s ease-in-out;
     color: #01be71;
     background: #010606;
+}
 
+&:hover:after {
+    transition: all 0.4s ease;
+    content : "  Wallet";
+}
+`
+
+export const SocialWrapper = styled.div`
+height: 80px;
+display: flex;
+align-items: flex-end;
+justify-content: center;
+gap: 20px;
+margin-top: 20px;
+`
+
+export const GitHub = styled(FaGithub)`
+color:#01be71;
+cursor: pointer;
+font-size: 1.5rem;
+
+&:hover {
+    transition: all 0.1s ease-in-out;
+    font-size: 1.6rem;
+    
+}
+`
+export const Linkedin = styled(FaLinkedin)`
+color:#01be71;
+cursor: pointer;
+font-size: 1.5rem;
+
+
+&:hover {
+    transition: all 0.1s ease-in-out;
+    font-size: 1.6rem;
+}
 `
