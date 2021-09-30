@@ -44,11 +44,12 @@ display: flex;
 flex-direction: column;
 align-items: center;
 `
+
 export const HeroH1 = styled.h1`
 color: #01be71;
 font-size: clamp(2.5em, 3vh, 5em );
 text-align:center;
-line-height: 3;
+line-height: 2;
 `
 export const HeroP = styled.p`
 color: #f2f2f2;
