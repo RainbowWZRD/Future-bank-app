@@ -63,10 +63,10 @@ color: white;
 
 export const NavMenu = styled.ul`
 display: flex;
-align-items:center;
 list-style: none;
 text-align:center;
-margin-right: -22px;
+justify-content: center;
+width: 70%;
 border: 1px solid salmon;
 
 @media screen and (max-width: 768px){
@@ -87,10 +87,36 @@ text-decoration:none;
 padding: 0 1rem;
 height: 100%;
 cursor: pointer;
-border: 1px solid salmon;
 
 &.active {
     border-bottom: 3px solid #01bf71 ;
 }
 `
 
+export const NavBtn = styled.div`
+display: flex;
+align-items: center;
+
+@media screen and (max-width : 768px){
+    display: none;
+}
+`
+
+export const BtnSignIn = styled(LinkR)`
+border-radius: 50px;
+background: #01be71;
+white-space: nowrap;
+padding: 10px 22px;
+color: #010606;
+font-size: 16px;
+cursor: pointer;
+text-decoration:none;
+transition: all 0.3s ease-in-out;
+margin-left: 4em;
+
+&:hover {
+    transition: all 0.3s ease-in-out;
+    color: #01be71;
+    background: #010606;
+}
+`
