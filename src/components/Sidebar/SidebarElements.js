@@ -8,7 +8,7 @@ import {FaLinkedin} from "react-icons/fa";
 
 export const SidebarContainer = styled.aside`
 position: fixed;
-z-index: 999;
+z-index: 1;
 width: 100%;
 height: 100%;
 background: black;
@@ -19,6 +19,10 @@ top:0;
 transition: all 0.3s ease ;
 opacity: ${({ isOpen }) => isOpen ? "100" : "0"};
 top : ${({ isOpen }) => isOpen ? "0" : "-100"};
+
+@media screen and (max-width : 768px){
+    z-index: 3;
+}
 `
 
 export const CloseIcon = styled(FaTimes)`

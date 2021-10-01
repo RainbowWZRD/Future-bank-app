@@ -26,7 +26,7 @@ export const NavContainer = styled.div`
 display: flex;
 justify-content: space-space-between;
 align-items: center;
-z-index:1px;
+z-index:11;
 height: 80px;
 width: 100%;
 max-width: 1100px;
@@ -86,7 +86,8 @@ display: flex;
 text-decoration:none;
 padding: 0 1rem;
 height: 100%;
-cursor: pointer;
+z-index: 999px;
+
 
 &.active {
     border-bottom: 3px solid #01bf71 ;

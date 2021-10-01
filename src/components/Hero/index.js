@@ -23,8 +23,8 @@ const Hero = () => {
         <VideoBg  autoPlay loop muted src={Video} type="video/mp4"  />
         </HeroBg>
         <HeroContent>
-            <HeroH1>Check before the jump</HeroH1>
-            <HeroP>Sign-up today, take under control your favourite Cryptos and store them 🔒
+            <HeroH1>Check before the jump!</HeroH1>
+            <HeroP>Sign-up today, watch your assets grow and store them in a bulletproof cryptobank
             </HeroP>
             <HeroBtnWrapper>
                 <HeroBtn to="signup">Sign up

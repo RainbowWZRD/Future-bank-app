@@ -9,7 +9,6 @@ import {
     SideBtnWrap,
     SidebarRoute,
     SocialWrapper,
-    SocialIcons,
     GitHub,
     Linkedin
 } from "./SidebarElements"

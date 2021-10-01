@@ -1,34 +1,24 @@
-import React, {useState, useEffect} from 'react'
-import CoinGecko from 'coingecko-api';
+import React from 'react'
 import {CryptoHero,
     CryptoWrapper,
     CryptoLi,
     CryptoP,
     CryptoH1,
     CryptoImg,
-    CryptoCap
+    CryptoCap,
+    CryptoHeading
 } from "./CryptosElements"
+import Pagination from "./../../Hooks/Pagination"
 
-const Cryptos = () => {
-const [crypto, setCrypto] = useState([])
+const Cryptos = ({crypto, loading, cryptoPerPage, totalCrypto}) => {
 
-    const CoinGecko = require('coingecko-api');
-    const CoinGeckoClient = new CoinGecko();
-
-    const fetchData = async () => {
-        let data = await CoinGeckoClient.coins.markets();
-        let myData = data.data
-        setCrypto(myData)
+    if(loading) {
+        return <h2>Loading...</h2>
     }
 
-    useEffect(() => {
-        fetchData()
-        console.log(crypto);
-    }, [])
-
     return <>
-     <CryptoHero>
-                    
+     <CryptoHero>  
+     <CryptoHeading>Top Markets</CryptoHeading>      
     <CryptoWrapper>
         {crypto.map((token) => {
             const {id, symbol, name, image, market_cap } = token
@@ -41,6 +31,7 @@ const [crypto, setCrypto] = useState([])
                 </CryptoLi>
             )
         })}
+        <Pagination cryptoPerPage={cryptoPerPage} totalCrypto={crypto.length} />
     </CryptoWrapper>
                     </CryptoHero>
     </>

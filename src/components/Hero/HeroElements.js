@@ -13,6 +13,26 @@ padding: 0 30px;
 height: 800px;
 position: relative;
 z-index:1;
+
+:before {
+    content: "";
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    background: linear-gradient(
+        180deg,
+        rgba(0,0,0,0.2) 0%,
+        rgba(0,0,0,0.6) 100%,
+    ),
+    linear-gradient(
+        180deg,
+        rgba(0,0,0,0.2) 0%,
+        rgba(0,0,0,0.6) 100%,
+    );
+    
+}
 `
 
 export const HeroBg = styled.div`
@@ -49,7 +69,8 @@ export const HeroH1 = styled.h1`
 color: #01be71;
 font-size: clamp(2.5em, 3vh, 5em );
 text-align:center;
-line-height: 2;
+font-weight: bold;
+line-height: 1;
 `
 export const HeroP = styled.p`
 color: #f2f2f2;
@@ -70,7 +91,7 @@ font-size: 16px;
 cursor: pointer;
 text-decoration:none;
 transition: all 0.4s ease-in-out;
-
+z-index: 1000;
 `
 
 export const ArrowNormal = styled(FaAngleRight)`
